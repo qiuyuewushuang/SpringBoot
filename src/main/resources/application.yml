@@ -1,0 +1,15 @@
+spring:
+  thymeleaf:
+    #开发时关闭缓存,不然没法看到实时页面(要重启)
+    cache: false
+    encoding: UTF-8
+    #enable-spring-el-compiler: true
+  mvc:
+    #静态文件请求匹配方式
+    static-path-pattern: /**
+    view:
+      suffix: .html
+      prefix: /
+  #修改默认的静态资源寻址路径
+  resources:
+    static-locations: classpath:/templates/,classpath:META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public

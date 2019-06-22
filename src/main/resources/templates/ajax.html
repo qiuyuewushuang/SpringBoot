@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" th:inline="javascript">
+        $(function(){
+            alert("name:"+[[${name}]]);
+            alert("age:"+[[${age}]]);
+        })
+    </script>
+</head>
+<body>
+    <form action="ajax">
+        <p>姓名：<input type="text" name="name"></p>
+        <p>年龄：<input type="text" name="age"></p>
+        <p><input type="submit" value="提交"></p>
+    </form>
+</body>
+</html>

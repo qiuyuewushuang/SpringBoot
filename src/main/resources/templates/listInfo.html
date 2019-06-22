@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>List</h1>
+    <ul th:each="s,status:${list}">
+        <li th:text="${s}">aaa</li>
+        <li th:if="${status.index}%2==0" th:attr="style='background-color:red;'" style="background-color: grey;">$$$$$$$$$$</li>
+        <li th:unless="${status.index}%2==0" th:attr="style='background-color:blue;'">#########</li>
+    </ul>
+
+    <h1>Map</h1>
+    <ul>
+        <li th:each="m:${map}" th:text="${m.value}">aaa</li>
+    </ul>
+
+   <!-- <p th:text="${'年龄age：'+#numbers.formatDecimal(map.get('age'),8,9)}">1000000000000</p>
+    <p th:switch="${map.get('sex')}">
+        <img th:case="1" th:src="@{'image/add_ad.gif'}"/>
+        <img th:case="2" th:src="@{'image/login.jpg'}"/>
+        <span th:case="*" th:text="aaaaaaaaaa"></span>
+    </p>-->
+</body>
+</html>

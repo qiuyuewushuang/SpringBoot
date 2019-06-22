@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    选择：
+    <select name="choose" th:field="*{ss.id}">
+        <option th:each="s:${list}"  th:text="${s.name}" th:value="${s.id}"  th:style="${sStat.odd}?'background-color:grey;':'background-color:red;'"></option>
+    </select>
+
+    <!--包含-->
+    <!--<div th:include="list.html"></div>-->
+    <iframe src="list.html" width="100%" frameborder="0"></iframe>
+</body>
+</html>

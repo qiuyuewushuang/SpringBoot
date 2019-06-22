@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" th:inline="javascript">
+        var name=[[name]];
+        var age=[[age]];
+        $(function(){
+            alert("name:"+name);
+            alert("age:"+age);
+        })
+    </script>
+</head>
+<body>
+    <h1>param</h1>
+    <p th:text="'name:'+${param.name}">vvv</p>
+    <p th:text="'pwd:'+${age}">fff</p>
+    <p th:text=" ${session.context}">aaaaaaaaaa</p>
+</body>
+</html>
